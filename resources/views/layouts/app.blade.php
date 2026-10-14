@@ -16,5 +16,7 @@
 
         @wirekitScripts
         @livewireScripts
+        
+        <livewire:navbar />
     </body>
 </html>
