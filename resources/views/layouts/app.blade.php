@@ -12,11 +12,10 @@
         @wirekitStyles
     </head>
     <body>
+        <livewire:navbar />
         {{ $slot }}
 
         @wirekitScripts
         @livewireScripts
-        
-        <livewire:navbar />
     </body>
 </html>
