@@ -10,6 +10,7 @@
 
         @livewireStyles
         @wirekitStyles
+        <x-wirekit::fonts />
     </head>
     <body>
         <livewire:navbar />

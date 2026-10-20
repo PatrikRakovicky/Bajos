@@ -1,18 +1,43 @@
 @import 'tailwindcss';
-@source '../../vendor/pushery/wirekit/resources/views/**/*.blade.php';
 
+@source '../../vendor/pushery/wirekit/resources/views/**/*.blade.php';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: var(--font-wk-sans);
+
+    --color-accent: var(--color-wk-accent);
+    --color-accent-hover: var(--color-wk-accent-hover);
+    --color-accent-active: var(--color-wk-accent-active);
+    --color-accent-content: var(--color-wk-accent-content);
+    --color-accent-foreground: var(--color-wk-accent-fg);
+    --color-accent-ring: var(--color-wk-ring);
+    --color-accent-subtle: var(--color-wk-accent-subtle);
+    --color-accent-border: var(--color-wk-accent-border);
+
+    --radius: var(--radius-wk);
+    --shadow: var(--shadow-wk);
 }
 
 :root {
     --color-wk-accent: #009adc;
-    --color-wk-accent-hover: #007AA3;
+    --color-wk-accent-hover: #0088c4;
+    --color-wk-accent-active: #0079ae;
     --color-wk-accent-content: #0079ae;
     --color-wk-accent-fg: #ffffff;
     --color-wk-ring: #009adc;
+    --color-wk-accent-subtle: #e6f6fd;
+    --color-wk-accent-border: #a6def4;
+}
+
+.dark {
+    --color-wk-accent: #009adc;
+    --color-wk-accent-hover: #38bdf8;
+    --color-wk-accent-active: #7dd3fc;
+    --color-wk-accent-content: #38bdf8;
+    --color-wk-accent-fg: #ffffff;
+    --color-wk-ring: #38bdf8;
+    --color-wk-accent-subtle: #102f42;
+    --color-wk-accent-border: #245570;
 }
