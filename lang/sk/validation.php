@@ -1,162 +1,155 @@
 <?php
 
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
-
-    'accepted' => ':attribute je správny.',
-    'accepted_if' => ':attribute je správny, ak :other je :value.',
-    'active_url' => ':attribute nie je platná URL adresa.',
-    'after' => ':attribute musí byť dátum väčší než :date.',
-    'after_or_equal' => ':attribute musí byť dátum väčší alebo rovný dátumu :date.',
-    'alpha' => ':attribute musí obsahovať len písmená.',
-    'alpha_dash' => ':attribute musí obsahovať len písmená, čísla, čiarky a podčiarkovníky.',
-    'alpha_num' => ':attribute musí obsahovať len písmená a čísla.',
-    'array' => ':attribute musí byť pole.',
-    'before' => ':attribute musí byť dátum menší než :date.',
-    'before_or_equal' => ':attribute musí byť dátum menší alebo rovný než :date.',
+    'accepted' => ':Attribute musíte prijať.',
+    'accepted_if' => ':Attribute musíte prijať, ak pole :other má hodnotu :value.',
+    'active_url' => ':Attribute musí byť platná URL adresa.',
+    'after' => ':Attribute musí byť dátum po :date.',
+    'after_or_equal' => ':Attribute musí byť dátum :date alebo neskorší.',
+    'alpha' => ':Attribute môže obsahovať iba písmená.',
+    'alpha_dash' => ':Attribute môže obsahovať iba písmená, čísla, pomlčky a podčiarkovníky.',
+    'alpha_num' => ':Attribute môže obsahovať iba písmená a čísla.',
+    'array' => ':Attribute musí byť pole.',
+    'before' => ':Attribute musí byť dátum pred :date.',
+    'before_or_equal' => ':Attribute musí byť dátum :date alebo skorší.',
     'between' => [
-        'array' => ':attribute musí mať :min až :max položiek.',
-        'file' => ':attribute musí mať :min až :max kB.',
-        'numeric' => ':attribute musí byť :min až :max.',
-        'string' => ':attribute musí mať :min až :max znakov.',
+        'array' => ':Attribute musí obsahovať od :min do :max položiek.',
+        'file' => ':Attribute musí mať veľkosť od :min do :max kB.',
+        'numeric' => ':Attribute musí mať hodnotu od :min do :max.',
+        'string' => ':Attribute musí obsahovať od :min do :max znakov.',
     ],
-    'boolean' => ':attribute musí byť áno alebo nie.',
-    'confirmed' => ':attribute potvrdenie sa nezhoduje.',
-    'current_password' => 'Nesprávne heslo.',
-    'date' => ':attribute nie je platný dátum.',
-    'date_equals' => ':attribute musí byť dátum :date.',
-    'date_format' => ':attribute nie je platným formátom dátumu podľa :format.',
-    'declined' => ':attribute musí byť odmietnutý.',
-    'declined_if' => ':attribute musí byť odmietnutý ak :other má hodnotu :value.',
-    'different' => ':attribute a :other sa nesmú zhodovať.',
-    'digits' => ':attribute musí obsahovať :digits čísel.',
-    'digits_between' => ':attribute musí obsahovať od :min do :max znakov.',
-    'dimensions' => ':attribute má neplatné rozmery obrázka.',
-    'distinct' => ':attribute má duplicitnú hodnotu.',
-    'email' => ':attribute musí byť platný e-mail.',
-    'ends_with' => ':attribute musí končiť jedným z: :values.',
-    'enum' => 'Zvolený :attribute nie je platný.',
-    'exists' => 'Zvolený atribút :attribute nie je platný.',
-    'file' => ':attribute musí byť súbor.',
-    'filled' => ':attribute musí byť vyplnený.',
+    'boolean' => ':Attribute musí mať hodnotu áno alebo nie.',
+    'confirmed' => 'Zadané heslá sa nezhodujú.',
+    'current_password' => 'Zadané heslo nie je správne.',
+    'date' => ':Attribute musí byť platný dátum.',
+    'date_equals' => ':Attribute musí byť dátum :date.',
+    'date_format' => ':Attribute musí mať formát :format.',
+    'declined' => ':Attribute musí byť odmietnuté.',
+    'declined_if' => ':Attribute musí byť odmietnuté, ak pole :other má hodnotu :value.',
+    'different' => ':Attribute sa nesmie zhodovať s poľom :other.',
+    'digits' => ':Attribute musí obsahovať presne :digits číslic.',
+    'digits_between' => ':Attribute musí obsahovať od :min do :max číslic.',
+    'dimensions' => ':Attribute má neplatné rozmery obrázka.',
+    'distinct' => ':Attribute obsahuje duplicitnú hodnotu.',
+    'email' => 'Zadajte platnú e-mailovú adresu.',
+    'ends_with' => ':Attribute musí končiť jednou z týchto hodnôt: :values.',
+    'enum' => 'Vybraná hodnota poľa :attribute nie je platná.',
+    'exists' => 'Vybraná hodnota poľa :attribute nie je platná.',
+    'file' => ':Attribute musí byť súbor.',
+    'filled' => ':Attribute nesmie zostať prázdne.',
     'gt' => [
-        'array' => ':attribute musí mať viac než :value položiek',
-        'file' => ':attribute musí byť väčší než :value kB.',
-        'numeric' => ':attribute musí byť väčší než :value.',
-        'string' => ':attribute musí byť väčší než :value znakov.',
+        'array' => ':Attribute musí obsahovať viac ako :value položiek.',
+        'file' => ':Attribute musí mať veľkosť väčšiu ako :value kB.',
+        'numeric' => ':Attribute musí byť väčšie ako :value.',
+        'string' => ':Attribute musí obsahovať viac ako :value znakov.',
     ],
     'gte' => [
-        'array' => ':attribute musí mať viac alebo sa rovnať :value položiek',
-        'file' => ':attribute musí byť väčší alebo sa rovnať :value kB.',
-        'numeric' => ':attribute musí byť väčší alebo sa rovnať :value.',
-        'string' => ':attribute musí byť väčší alebo sa rovnať :value znakov.',
+        'array' => ':Attribute musí obsahovať aspoň :value položiek.',
+        'file' => ':Attribute musí mať veľkosť aspoň :value kB.',
+        'numeric' => ':Attribute musí byť väčšie alebo rovné :value.',
+        'string' => ':Attribute musí obsahovať aspoň :value znakov.',
     ],
-    'image' => ':attribute musí byť obrázok.',
-    'in' => 'Vybraný atribút nie je platný.',
-    'in_array' => ':attribute pole sa nenachádza v :other.',
-    'integer' => ':attribute musí byť celé číslo.',
-    'ip' => ':attribute musí byť platná IP adresa.',
-    'ipv4' => ':attribute musí byť platná IPv4 adresa.',
-    'ipv6' => ':attribute musí byť platná IPv6 adresa.',
-    'json' => ':attribute musí byť platný JSON reťazec.',
+    'image' => ':Attribute musí byť obrázok.',
+    'in' => 'Vybraná hodnota poľa :attribute nie je platná.',
+    'in_array' => ':Attribute sa nenachádza v poli :other.',
+    'integer' => ':Attribute musí byť celé číslo.',
+    'ip' => ':Attribute musí byť platná IP adresa.',
+    'ipv4' => ':Attribute musí byť platná IPv4 adresa.',
+    'ipv6' => ':Attribute musí byť platná IPv6 adresa.',
+    'json' => ':Attribute musí byť platný reťazec JSON.',
     'lt' => [
-        'array' => ':attribute musí obsahovať menej než :min položiek.',
-        'file' => ':attribute musí mať veľkosť menej než :min kB.',
-        'numeric' => ':attribute musí mať hodnotu menej než :min.',
-        'string' => ':attribute musí obsahovať menej než :min znakov.',
+        'array' => ':Attribute musí obsahovať menej ako :value položiek.',
+        'file' => ':Attribute musí mať veľkosť menšiu ako :value kB.',
+        'numeric' => ':Attribute musí byť menšie ako :value.',
+        'string' => ':Attribute musí obsahovať menej ako :value znakov.',
     ],
     'lte' => [
-        'array' => ':attribute musí obsahovať menej alebo maximálne :min položiek.',
-        'file' => ':attribute musí mať veľkosť menej alebo maximálne :min kB.',
-        'numeric' => ':attribute musí mať hodnotu menej alebo maximálne :min.',
-        'string' => ':attribute musí obsahovať menej alebo maximálne :min znakov.',
+        'array' => ':Attribute môže obsahovať najviac :value položiek.',
+        'file' => ':Attribute môže mať veľkosť najviac :value kB.',
+        'numeric' => ':Attribute musí byť menšie alebo rovné :value.',
+        'string' => ':Attribute môže obsahovať najviac :value znakov.',
     ],
-    'mac_address' => ':attribute musí byť platná MAC adresa.',
+    'mac_address' => ':Attribute musí byť platná MAC adresa.',
     'max' => [
-        'array' => ':attribute musí obsahovať maximálne :max položiek.',
-        'file' => ':attribute musí mať veľkosť maximálne :max kB.',
-        'numeric' => ':attribute musí mať hodnotu :max maximálne.',
-        'string' => ':attribute musí obsahovať maximálne :max znakov.',
+        'array' => ':Attribute môže obsahovať najviac :max položiek.',
+        'file' => ':Attribute môže mať veľkosť najviac :max kB.',
+        'numeric' => ':Attribute môže mať hodnotu najviac :max.',
+        'string' => ':Attribute môže obsahovať najviac :max znakov.',
     ],
-    'mimes' => ':attribute musí byť súbor typu: :values.',
-    'mimetypes' => ':attribute musí byť súbor typu: :values.',
+    'mimes' => ':Attribute musí byť súbor jedného z týchto typov: :values.',
+    'mimetypes' => ':Attribute musí byť súbor jedného z týchto typov: :values.',
     'min' => [
-        'array' => ':attribute musí obsahovať minimálne :min položiek.',
-        'file' => ':attribute musí mať veľkosť minimálne :min kB.',
-        'numeric' => ':attribute musí mať hodnotu :min minimálne.',
-        'string' => ':attribute musí obsahovať minimálne :min znakov.',
+        'array' => ':Attribute musí obsahovať aspoň :min položiek.',
+        'file' => ':Attribute musí mať veľkosť aspoň :min kB.',
+        'numeric' => ':Attribute musí mať hodnotu aspoň :min.',
+        'string' => ':Attribute musí obsahovať aspoň :min znakov.',
     ],
-    'multiple_of' => ':attribute musí byť násobkom :value.',
-    'not_in' => 'Vybraný atribút :attribute nie je platný.',
-    'not_regex' => ':attribute neplatný formát.',
-    'numeric' => ':attribute musí byť číslo.',
-    'present' => ':attribute pole musí byť zadané.',
-    'prohibited' => ':attribute pole nemôže byť vyplnené.',
-    'prohibited_if' => ':attribute pole nemôže byť vyplnené, ak je v poli :other hodnota :value.',
-    'prohibited_unless' => ':attribute pole neumožňuje byť zadaným ak pole :other obshuje hodnoty :values.',
-    'prohibits' => ':attribute pole neumožňuje poľu :other byť zadaným.',
-    'regex' => ':attribute formát nie je platný.',
-    'required' => ':attribute pole je povinné.',
-    'required_array_keys' => ':attribute pole musí obsahovať hodnoty: :values.',
-    'required_if' => ':attribute je povinné pole len ak pole :other má hodnotu :value.',
-    'required_unless' => ':attribute je povinné pole len ak pole :other má hodnoty :values.',
-    'required_with' => ':attribute je povinné pole ak hodnota :values je zadaná.',
-    'required_with_all' => ':attribute je povinné pole ak hodnoty :values sú zadaná.',
-    'required_without' => ':attribute je povinné pole ak hodnota :values nie je zadaná.',
-    'required_without_all' => ':attribute je povinné pole, ak žiadna z hodnôt :values nie je zadaná.',
-    'same' => ':attribute a :other musia byť zhodné.',
+    'multiple_of' => ':Attribute musí byť násobkom čísla :value.',
+    'not_in' => 'Vybraná hodnota poľa :attribute nie je platná.',
+    'not_regex' => ':Attribute má neplatný formát.',
+    'numeric' => ':Attribute musí byť číslo.',
+    'present' => ':Attribute musí byť uvedené.',
+    'prohibited' => ':Attribute nesmie byť vyplnené.',
+    'prohibited_if' => ':Attribute nesmie byť vyplnené, ak pole :other má hodnotu :value.',
+    'prohibited_unless' => ':Attribute nesmie byť vyplnené, pokiaľ pole :other nemá jednu z hodnôt: :values.',
+    'prohibits' => 'Ak je vyplnené pole :attribute, pole :other nesmie byť vyplnené.',
+    'regex' => ':Attribute má neplatný formát.',
+    'required' => ':Attribute je povinné.',
+    'required_array_keys' => ':Attribute musí obsahovať tieto položky: :values.',
+    'required_if' => ':Attribute je povinné, ak pole :other má hodnotu :value.',
+    'required_unless' => ':Attribute je povinné, pokiaľ pole :other nemá jednu z hodnôt: :values.',
+    'required_with' => ':Attribute je povinné, ak je vyplnené pole :values.',
+    'required_with_all' => ':Attribute je povinné, ak sú vyplnené všetky tieto polia: :values.',
+    'required_without' => ':Attribute je povinné, ak pole :values nie je vyplnené.',
+    'required_without_all' => ':Attribute je povinné, ak nie je vyplnené žiadne z týchto polí: :values.',
+    'same' => ':Attribute sa musí zhodovať s poľom :other.',
     'size' => [
-        'array' => ':attribute musí obsahovaťmust :size položiek.',
-        'file' => ':attribute musí mať veľkosť :size kB.',
-        'numeric' => ':attribute musí byť :size.',
-        'string' => ':attribute musí obsahovať :size znakov.',
+        'array' => ':Attribute musí obsahovať presne :size položiek.',
+        'file' => ':Attribute musí mať veľkosť :size kB.',
+        'numeric' => ':Attribute musí mať hodnotu :size.',
+        'string' => ':Attribute musí obsahovať presne :size znakov.',
     ],
-    'starts_with' => ':attribute musí začínať jedným z nasledovných: :values.',
-    'string' => ':attribute musí byť reťazec.',
-    'timezone' => ':attribute musí byť platná časová zóna.',
-    'unique' => ':attribute bol už použitý.',
-    'uploaded' => ':attribute nebolo možné nahrať.',
-    'url' => 'The :attribute musí byť platná URL adresa.',
-    'uuid' => ':attribute musí byť platné používateľské UUID.',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify custom validation messages for attributes using the
-    | convention "attribute.rule" to name the lines. This makes it quick to
-    | specify a specific custom language line for a given attribute rule.
-    |
-    */
+    'starts_with' => ':Attribute musí začínať jednou z týchto hodnôt: :values.',
+    'string' => ':Attribute musí byť text.',
+    'timezone' => ':Attribute musí byť platné časové pásmo.',
+    'unique' => 'Táto e-mailová adresa je už zaregistrovaná.',
+    'uploaded' => ':Attribute sa nepodarilo nahrať.',
+    'url' => ':Attribute musí byť platná URL adresa.',
+    'uuid' => ':Attribute musí byť platné UUID.',
 
     'custom' => [
         'attribute-name' => [
-            'rule-name' => 'custom-message',
+            'rule-name' => 'Neplatná hodnota.',
+        ],
+        'name' => [
+            'required' => 'Zadajte svoje meno a priezvisko.',
+        ],
+        'email' => [
+            'required' => 'Zadajte svoju e-mailovú adresu.',
+            'email' => 'Zadajte platnú e-mailovú adresu.',
+        ],
+        'phone' => [
+            'regex' => 'Zadajte telefónne číslo v platnom formáte.',
+        ],
+        'password' => [
+            'required' => 'Zadajte heslo.',
+            'min' => 'Heslo musí obsahovať aspoň :min znakov.',
+        ],
+        'password_confirmation' => [
+            'required_with' => 'Zopakujte heslo na jeho potvrdenie.',
+            'same' => 'Zadané heslá sa nezhodujú.',
+        ],
+        'terms' => [
+            'accepted' => 'Pred vytvorením účtu musíte súhlasiť s podmienkami používania.',
         ],
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Attributes
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used to swap our attribute placeholder
-    | with something more reader friendly such as "E-Mail Address" instead
-    | of "email". This simply helps us make our message more expressive.
-    |
-    */
-
-    'attributes' => [],
-
+    'attributes' => [
+        'name' => 'meno a priezvisko',
+        'email' => 'e-mailová adresa',
+        'phone' => 'telefónne číslo',
+        'password' => 'heslo',
+        'password_confirmation' => 'potvrdenie hesla',
+        'terms' => 'podmienky používania',
+    ],
 ];
