@@ -35,6 +35,16 @@ new class extends Component {
             throw $exception;
         }
 
+        $user = User::create([
+            'username' => $validated['name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'] ?: null,
+            'password' => $validated['password'],
+        ]);
+
+        Auth::login($user);
+        session()->regenerate();
+
         $this->redirect(route('home'), navigate: true);
     }
 };
