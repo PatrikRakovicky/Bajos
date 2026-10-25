@@ -1,15 +1,14 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use App\Rules\RealPhoneNumber;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 new class extends Component {
-    #[Validate('required|string|max:30')]
     public string $name = '';
-
-    #[Validate('required|string|email:rfc,dns|max:254|unique:users,email')]
     public string $email = '';
 
     #[Validate(['nullable', 'string', 'max:16', new RealPhoneNumber()])]
@@ -24,15 +23,36 @@ new class extends Component {
     #[Validate('accepted')]
     public bool $terms = false;
 
+    protected function rules(): array
+    {
+        return [
+            'name' => ['required', 'string', 'max:50'],
+            'email' => ['required', 'email', 'max:100'],
+            'phone' => ['nullable', 'string', 'max:20', 'regex:/^\+[1-9]\d{6,14}$/'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'terms' => ['accepted'],
+        ];
+    }
+
+    protected function validationAttributes(): array
+    {
+        return [
+            'name' => 'meno a priezvisko',
+            'email' => 'e-mailová adresa',
+            'phone' => 'telefónne číslo',
+            'password' => 'Heslo',
+            'terms' => 'podmienky používania',
+        ];
+    }
+
     public function register(): void
     {
         try {
-            $this->validate();
+            $validated = $this->validate();
         } catch (ValidationException $exception) {
             $this->dispatch('wirekit:focus-invalid');
             throw $exception;
         }
-
         $this->redirect(route('home'), navigate: true);
     }
 };
