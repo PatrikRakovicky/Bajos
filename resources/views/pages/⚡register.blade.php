@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use App\Rules\RealPhoneNumber;
 use Livewire\Attributes\Validate;
@@ -27,7 +29,7 @@ new class extends Component {
     public function register(): void
     {
         try {
-            $this->validate();
+            $validated = $this->validate();
         } catch (ValidationException $exception) {
             $this->dispatch('wirekit:focus-invalid');
             throw $exception;

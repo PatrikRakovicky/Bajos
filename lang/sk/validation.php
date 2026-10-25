@@ -70,6 +70,7 @@ return [
         'string' => ':Attribute môže obsahovať najviac :value znakov.',
     ],
     'mac_address' => ':Attribute musí byť platná MAC adresa.',
+    'mac_address' => ':Attribute musí byť platná MAC adresa.',
     'max' => [
         'array' => ':Attribute môže obsahovať najviac :max položiek.',
         'file' => ':Attribute môže mať veľkosť najviac :max kB.',
