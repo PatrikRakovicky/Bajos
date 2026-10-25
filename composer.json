@@ -11,7 +11,7 @@
         "blade-ui-kit/blade-icons": "^1.10",
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0",
-        "pushery/wirekit": "^2.55"
+        "pushery/wirekit": "^2.69"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
