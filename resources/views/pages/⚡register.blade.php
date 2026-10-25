@@ -53,6 +53,7 @@ new class extends Component {
             $this->dispatch('wirekit:focus-invalid');
             throw $exception;
         }
+
         $this->redirect(route('home'), navigate: true);
     }
 };
