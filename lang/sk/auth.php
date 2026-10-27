@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'failed' => 'Zadané údaje nespĺňajú požadované kritéria.',
+    'failed' => 'Zadané prihlasovacie údaje sú nesprávne.',
     'password' => 'Nesprávne heslo.',
-    'throttle' => 'Príliž veľa pokusov. Prosím opakujte znova o :seconds sekúnd.',
+    'throttle' => 'Príliš veľa pokusov. Prosím opakujte znova o :seconds sekúnd.',
 
 ];
