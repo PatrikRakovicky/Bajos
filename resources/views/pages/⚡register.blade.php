@@ -73,7 +73,7 @@ new class extends Component {
                             wire:model.live.debounce.300ms="email" placeholder="jan.novak@gmail.com"
                             autocomplete="email" required />
 
-                        <x-wirekit::phone name="phone" wire:model.live.debounce.300ms="phone" country="SK"
+                        <x-wirekit::phone label="Telefónne číslo" name="phone" wire:model.live.debounce.300ms="phone" country="SK"
                             :country-order="['SK', 'CZ', 'HU', 'PL', 'AT']" placeholder="900 123 456"
                             x-on:input="$el.value = $el.value.replace(/\D/g, '')" counter maxlength="12" />
 
@@ -115,7 +115,7 @@ new class extends Component {
                 <x-wirekit::stack gap="md" align="stretch" class="mt-6">
                     <x-wirekit::divider label="Už máte účet?" />
 
-                    <x-wirekit::button href="#" intent="primary" surface="soft" class="w-full">
+                    <x-wirekit::button href="{{ route('login') }}" intent="primary" surface="soft" class="w-full">
                         Prihlásiť sa
                     </x-wirekit::button>
                 </x-wirekit::stack>

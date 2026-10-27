@@ -32,7 +32,7 @@ new class extends Component {
 
     <x-slot:actions>
         <div class="flex shrink-0 items-center gap-2">
-            <x-wirekit::button type="button" intent="neutral" surface="ghost" size="sm">
+            <x-wirekit::button href="{{ route('login') }}" type="button" intent="neutral" surface="ghost" size="sm">
                 Prihlásiť sa
             </x-wirekit::button>
 
