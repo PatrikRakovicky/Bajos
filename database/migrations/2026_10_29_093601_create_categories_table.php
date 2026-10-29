@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('category_name', 50);
             $table->string('slug', 60)->unique();
-            $table->string('category_image', 255)->nullable();
+            $table->string('category_icon', 50)->nullable();
             $table->timestamps();
         });
     }
